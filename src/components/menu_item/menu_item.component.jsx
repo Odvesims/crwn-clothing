@@ -1,24 +1,15 @@
-import React, { Component } from 'react';
+import './menu-item.styles.scss';
 
-class MenuItem extends Component {
-  constructor(props) {
-    super();
-    this.state = {
-      title: props.title,
-      subtitle: props.subtitle,
-    };
-  }
-
-  render() {
-    return (
-      <div className="menu-item">
-        <div className="content">
-          <h1 className="title">{this.state.title}</h1>
-          <span className="subtitle">{this.state.subtitle}</span>
-        </div>
-      </div>
-    );
-  }
-}
-
+const MenuItem = ({ title, subtitle, imageUrl, size }) => (
+  <div className={`${size} menu-item`}>
+    <div
+      className="background-image"
+      style={{ backgroundImage: `url(${imageUrl})` }}
+    />
+    <div className="content">
+      <h1 className="title">{title.toUpperCase()}</h1>
+      <span className="subtitle">{subtitle}</span>
+    </div>
+  </div>
+);
 export default MenuItem;
