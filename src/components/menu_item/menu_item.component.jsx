@@ -6,12 +6,12 @@ import './menu-item.styles.scss';
 function MenuItem({ title, subtitle, imageUrl, size, linkUrl }) {
   const navigate = useNavigate();
 
-  function handleClick() {
+  function navigateToItem() {
     navigate(`${linkUrl}`);
   }
 
   return (
-    <div onClick={handleClick} className={`${size} menu-item`}>
+    <div onClick={navigateToItem} className={`${size} menu-item`}>
       <div
         className="background-image"
         style={{ backgroundImage: `url(${imageUrl})` }}
