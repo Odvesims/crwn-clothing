@@ -9,7 +9,7 @@ const NavigationBar = () => {
   useEffect(() => {
     const links = [
       { id: 1, route: 'shop', label: 'SHOP' },
-      { id: 2, route: 'sign-in', label: 'SIGN IN' },
+      { id: 2, route: 'authentication', label: 'SIGN IN' },
     ];
     setMenuLinks(links);
   }, []);

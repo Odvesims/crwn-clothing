@@ -92,7 +92,7 @@ const SignUpForm = () => {
         <FormInput
           label="Confirm Password"
           inputOptions={{
-            type: 'confirmPassword',
+            type: 'password',
             required: true,
             onChange: handleChange,
             name: 'confirmPassword',
